@@ -6,7 +6,6 @@ import json
 URL = "https://www.giveindia.org/certified-indian-ngos"
 def give_function():
     ng_all = [] 
-    
     request = requests.get(URL)
     soup = BeautifulSoup(request.text,"html.parser")
     table_data = soup.find("table",class_="jsx-697282504 certified-ngo-table")
